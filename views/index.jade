@@ -1,0 +1,33 @@
+doctype html
+html
+
+ head
+  body
+ //p Welcome to #{json.city[0].countryCode}
+block content  
+    // p #{json.city[0].countryCode}
+    each c in json.city
+        div.comment_detail
+         //   span.countryCode #{c.countryCode} + "---" + #{c.district} + "---" + #{c.id} + "---" + #{c.name} + "---" + #{c.population}
+            
+ div
+  table(border='1')
+    thead 
+    tbody 
+    tr 
+          td Code
+          td District
+          td ID
+          td Name
+          td Population
+          td Action
+      each c in json.city
+      tr
+          td #{c.countryCode}
+          td #{c.district} 
+          td #{c.id}
+          td #{c.name}
+          td #{c.population}
+          td  <a href="/editCity?cid=#{c.id}">Edit</a>/<a href=!"#">Delete</a>
+          
+                        

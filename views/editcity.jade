@@ -1,0 +1,27 @@
+h1 Edit City for the ID: #{json.city.id}
+div.content 
+ .pledged(style="width:10%")
+  form(action='/submitCity', name='editcityform', id='editcity', method='post')
+    fieldset
+      p
+        label(for='population') ID:
+        br
+        input(name='id', value='#{json.city.id}', type='text', id='id', readonly = true)
+      p
+        label(for='code') Code:
+        br
+        input(name='countryCode', value='#{json.city.countryCode}', type='text', id='code')
+      p
+        label(for='district') District:
+        br
+        input(name='district', value='#{json.city.district}', type='text', id='district')
+      p
+        label(for='population') Population:
+        br
+        input(name='population', value='#{json.city.population}', type='text', id='population')
+      p
+        label(for='population') Name:
+        br
+        input(name='name', value='#{json.city.name}', type='text', id='name')
+      p
+        input(name='submit', type='submit', value='Send', id='submit')
